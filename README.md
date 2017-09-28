@@ -18,9 +18,13 @@ My goal is to use this code in a more finished form to distantly read historical
 
 # (Planned) future code changes
 I would like to make the Latin stop word list an external file, e.g. something like stopWords.txt, for easy editing. The main program would then import this into list form dynamically during execution. 
+
 Detect language first. That will tell you which stop words to use and which lemmatizer to apply.
+
 Replace small syntactical and spelling errors such as a¨
+
 Look for proper names first. If found, mark them in some special way so that they do not get lemmatized.
+
 Look for all Roman numberals in upper case through say about CCC (300). Do this before going to lower case and lemmatizing.
 
 Lemmatize in German, French, and English first before tokenizing and lemmatizing in Latin. You should do Latin last because it requires the U-V and I-J change, which messes with the other languages. Tokenization seems to remove the n on the end of some words, making it hard to recognize many German words.
